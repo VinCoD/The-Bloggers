@@ -1,5 +1,5 @@
 # How To Use This Django Repository:
-$ git clone https://github.com/VinCoD/learning_logs.git <br/>
+$ git clone https://github.com/VinCoD/The-Bloggers.git <br/>
 $ cd learning_logs <br/>
 $ virtualenv ll_env <br/>
 $ source ll_env/bin/activate <br/>
