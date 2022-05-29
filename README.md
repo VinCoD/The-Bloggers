@@ -6,7 +6,7 @@ $ source ll_env/bin/activate <br/>
 $ pip install django <br/>
 $ touch secret_settings.py <br/>
 
-# in the secret_settings folder, add the following code:
+# in the secret_settings.py file, add the following code:
 
 SECRET_KEY = 'your_django_security key'<br/>
 DEBUG = True<br/>
