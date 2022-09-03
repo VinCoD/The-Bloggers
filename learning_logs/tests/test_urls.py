@@ -16,10 +16,10 @@ class TestUrls(SimpleTestCase):
 
         self.assertEquals(resolve(url).func, topics)
     
-    def test_topics_url_resolve(self):
+    def test_new_topics_url_resolve(self):
 
-        url = reverse('learning_logs:topics')
+        url = reverse('learning_logs:new_topic')
 
-        self.assertEquals(resolve(url).func, topics)
+        self.assertEquals(resolve(url).func, new_topic)
 
 
