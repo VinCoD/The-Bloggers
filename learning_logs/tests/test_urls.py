@@ -15,6 +15,11 @@ class TestUrls(SimpleTestCase):
         url = reverse('learning_logs:topics')
 
         self.assertEquals(resolve(url).func, topics)
+    
+    def test_new_topics_url_resolve(self):
+
+        url = reverse('learning_logs:new_topic')
+
+        self.assertEquals(resolve(url).func, new_topic)
 
 
-        
