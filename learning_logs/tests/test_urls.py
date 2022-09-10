@@ -1,8 +1,7 @@
 from django.test import SimpleTestCase
-from learning_logs.models import Headline, Post
 from django.urls import resolve, reverse
 from learning_logs.views import index, topics, topic, new_topic, new_entry, edit_entry
-from django.contrib.auth.models import User
+
 
 
 class TestUrls(SimpleTestCase):
