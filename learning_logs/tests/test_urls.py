@@ -1,6 +1,9 @@
 from django.test import SimpleTestCase
+from learning_logs.models import Headline, Post
 from django.urls import resolve, reverse
 from learning_logs.views import index, topics, topic, new_topic, new_entry, edit_entry
+from django.contrib.auth.models import User
+
 
 class TestUrls(SimpleTestCase):
 
@@ -16,10 +19,23 @@ class TestUrls(SimpleTestCase):
 
         self.assertEquals(resolve(url).func, topics)
     
-    def test_new_topics_url_resolve(self):
+    def test_new_topic_url_resolve(self):
 
         url = reverse('learning_logs:new_topic')
 
         self.assertEquals(resolve(url).func, new_topic)
+    
+    def test_topic_url_resolve(self):
+        url = reverse('learning_logs:topic', args=[1])
+
+        self.assertEquals(resolve(url).func, topic)
+    
+    def test_new_entry_url_resolve(self):
+        """ tests the new_entry url"""
+        url = reverse('learning_logs:new_entry', args=[1])
+
+        self.assertEquals(resolve(url).func, new_entry)
+    
+    
 
 
