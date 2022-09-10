@@ -34,7 +34,3 @@ class TestUrls(SimpleTestCase):
         url = reverse('learning_logs:new_entry', args=[1])
 
         self.assertEquals(resolve(url).func, new_entry)
-    
-    
-
-
