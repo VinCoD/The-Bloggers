@@ -32,14 +32,13 @@ class TestUrls(SimpleTestCase):
     def test_new_entry_url_resolve(self):
         """ tests the new_entry url"""
         url = reverse('learning_logs:new_entry', args=[1])
-
+        
         self.assertEquals(resolve(url).func, new_entry)
     
     def test_edit_entry_url_resolved(self):
         url = reverse('learning_logs:edit_entry', args=[1])
 
         self.assertEquals(resolve(url).func, edit_entry)
-    
-    
 
+        self.assertEquals(resolve(url).func, new_entry)
 
